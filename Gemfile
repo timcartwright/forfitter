@@ -91,3 +91,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-strava'
 gem 'twitter'
+
+gem 'strava-api-v3'
+
