@@ -1,4 +1,5 @@
 class SetupController < ApplicationController
+  before_action :authenticate_user!
   before_filter :require_local!
   layout :false
 

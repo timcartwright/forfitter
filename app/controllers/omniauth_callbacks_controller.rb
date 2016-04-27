@@ -8,6 +8,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def twitter
     generic_callback( 'twitter' )
   end
+  def strava
+    generic_callback( 'strava' )
+  end
 
 
 
