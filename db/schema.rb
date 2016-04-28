@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427165852) do
+ActiveRecord::Schema.define(version: 20160428065104) do
 
   create_table "contracts", force: :cascade do |t|
     t.integer  "user_id"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20160427165852) do
     t.integer  "number_of_forfits"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "times_per_week"
+    t.integer  "number_of_weeks"
   end
 
   add_index "contracts", ["user_id"], name: "index_contracts_on_user_id"

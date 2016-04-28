@@ -1,7 +1,10 @@
-= form_for @contract, url: contracts_path, layout: :horizontal do |f|
+%h1 My Plej
+  = form_for @contract, url: contracts_path, layout: :horizontal do |f|
+    %h2
+      = f.number_field :minutes_of_activity, autofocus: true
+    %h2
+      = f.number_field :times_per_week
+    %h2
+      = f.number_field :number_of_weeks
 
-  = f.number_field :minutes_of_activity, autofocus: true
-  = f.text_field :time_period, autocomplete: "off"
-  = f.number_field :forfit_amount
-
-  = f.submit "Commit", :class=>'btn btn-primary form-control'
+    = f.submit "Commit", :class=>'btn btn-primary form-control'

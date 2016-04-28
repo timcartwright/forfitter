@@ -12,6 +12,8 @@
 #  number_of_forfits   :integer
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  times_per_week      :integer
+#  number_of_weeks     :integer
 #
 
 class Contract < ActiveRecord::Base

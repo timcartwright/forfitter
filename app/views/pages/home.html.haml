@@ -1,0 +1,9 @@
+- @title = "ForFitter"
+.container
+  .row
+    .col-md-12
+      %div.text-center
+        %h1 Commit to Fit
+        %h4 Set yourself a goal. Back yourself to win.
+
+        = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')
