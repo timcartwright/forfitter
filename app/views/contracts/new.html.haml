@@ -1,0 +1,7 @@
+= form_for @contract, url: contracts_path, layout: :horizontal do |f|
+
+  = f.number_field :minutes_of_activity, autofocus: true
+  = f.text_field :time_period, autocomplete: "off"
+  = f.number_field :forfit_amount
+
+  = f.submit "Commit", :class=>'btn btn-primary form-control'
