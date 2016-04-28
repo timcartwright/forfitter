@@ -93,4 +93,5 @@ gem 'omniauth-strava'
 gem 'twitter'
 gem 'annotate'
 gem 'strava-api-v3'
+gem 'stripe'
 

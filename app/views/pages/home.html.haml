@@ -6,4 +6,25 @@
         %h1 Commit to Fit
         %h4 Set yourself a goal. Back yourself to win.
 
-        = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')
+        - if user_signed_in?
+          = form_for @contract, url: contracts_path, layout: :horizontal do |f|
+            %h2
+              = f.number_field :minutes_of_activity, autofocus: true
+            %h2
+              = f.number_field :times_per_week
+            %h2
+              = f.number_field :number_of_weeks
+            %h2
+              = f.number_field :forfit_amount
+
+            = javascript_include_tag "https://checkout.stripe.com/v2/checkout.js", 
+              :class => "stripe-button", 
+              :"data-key" => "#{Rails.configuration.stripe[:publishable_key]}", 
+              :"data-label" => "Submit",
+              :"data-panel-label" => "Commit to Fit",
+              :"data-name" => "ForFitter",
+              :"data-description" => "Your card will only be charged if you fail", 
+              :"data-image" => ""
+
+        -else
+          = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')
