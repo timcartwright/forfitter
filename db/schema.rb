@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428114815) do
+ActiveRecord::Schema.define(version: 20160429064307) do
 
   create_table "contracts", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160428114815) do
     t.integer  "times_per_week"
     t.integer  "number_of_weeks"
     t.string   "stripe_customer_id"
+    t.string   "strava_token"
   end
 
   add_index "contracts", ["user_id"], name: "index_contracts_on_user_id"

@@ -14,6 +14,7 @@
 #  updated_at          :datetime         not null
 #  times_per_week      :integer
 #  number_of_weeks     :integer
+#  stripe_customer_id  :string
 #
 
 class Contract < ActiveRecord::Base
