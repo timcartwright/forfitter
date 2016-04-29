@@ -15,6 +15,7 @@
 #  times_per_week      :integer
 #  number_of_weeks     :integer
 #  stripe_customer_id  :string
+#  strava_token        :string
 #
 
 FactoryGirl.define do
