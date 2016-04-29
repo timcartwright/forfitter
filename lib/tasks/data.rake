@@ -2,7 +2,7 @@ namespace :data do
   desc "Download and process activity data"
   task get_strava_data: :environment do
     puts "Getting Strava data..."
-    strava_users = Identity.where('provider = ?', 'strava')
+    strava_users = Identity.strava
     today = Date.today
     strava_users.each do |user|
       client = Strava::Api::V3::Client.new(:access_token => user.accesstoken)

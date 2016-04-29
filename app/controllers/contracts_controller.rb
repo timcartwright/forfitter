@@ -19,6 +19,7 @@ class ContractsController < ApplicationController
 
     if contract.save
       save_stripe_customer_id(contract, customer.id)
+      save_strava_token(contract)
       flash[:notice] = "Contract Created"
     else
       flash[:alert] = "Couldn't Create Contract"
@@ -39,6 +40,11 @@ private
 
   def get_stripe_customer_id(contract)
     contract.stripe_customer_id
+  end
+
+  def save_strava_token(contract)
+    contract.strava_token = contract.user.identities.strava.first.accesstoken
+    contract.save
   end
 
 end
