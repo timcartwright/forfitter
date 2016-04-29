@@ -7,3 +7,39 @@
 // .profile-page {
 //   The less here the better!!
 // }
+
+
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+.flash_messages {
+  display: none;
+}
+
+
+
+.jumbotron {
+  // position: relative;
+  margin-top: -82px;
+  background-image: url("fit_splash.jpg");
+  background-repeat: none;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  height: 70vh;
+  padding-top: 96px;
+}
+
+.intro {
+  h1 {
+    font-size: 5em;
+  }
+
+  p {
+    font-size: 40px;
+    line-height: 0.8;
+  }
+}

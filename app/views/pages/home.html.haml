@@ -1,10 +1,12 @@
 - @title = "ForFitter"
+
+.jumbotron
+
 .container
   .row
     .col-md-12
-      %div.text-center
-        %h1 Commit to Fit
-        %h4 Set yourself a goal. Back yourself to win.
+      %div.intro.text-center
+        %h1 Commit to Fit. Pay to Quit.
 
         - if user_signed_in?
           = form_for @contract, url: contracts_path, layout: :horizontal do |f|
@@ -27,4 +29,5 @@
               :"data-image" => ""
 
         -else
-          = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')
+          %p
+            = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')
