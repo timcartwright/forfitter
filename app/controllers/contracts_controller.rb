@@ -30,7 +30,7 @@ class ContractsController < ApplicationController
 
 private
   def contract_params
-    params.require(:contract).permit(:minutes_of_activity, :time_period, :forfit_amount)
+    params.require(:contract).permit(:minutes_of_activity, :times_per_week, :number_of_weeks, :forfit_amount)
   end
 
   def save_stripe_customer_id(contract, id)
