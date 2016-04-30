@@ -52,3 +52,22 @@
     text-align: center;
   }
 }
+
+.stripe-button-el span {
+    padding: 0 16px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    background: #5cb85c !important;
+    background-image: -webkit-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -moz-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -ms-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -o-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -webkit-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -moz-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -ms-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: -o-linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    background-image: linear-gradient(#5cb85c,#5cb85c 85%,#5cb85c) !important;
+    font-size: 22px !important;
+    font-family: inherit !important;
+    font-weight: normal !important;
+}
