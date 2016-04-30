@@ -1,2 +1,9 @@
-- @contracts.each do |contract|
-  = contract.minutes_of_activity
+.container
+  .row
+    .col-md-12
+      %h1 My Contract
+
+      - @contracts.each do |contract|
+        
+        %h3 I will do #{contract.minutes_of_activity} minutes of exercise, #{contract.times_per_week} times per week, for #{contract.number_of_weeks} weeks, or pay a ForFit of £#{contract.forfit_amount}
+      
