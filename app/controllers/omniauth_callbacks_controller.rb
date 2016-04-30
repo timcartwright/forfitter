@@ -11,6 +11,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def strava
     generic_callback( 'strava' )
   end
+  def fitbit_oauth2
+    generic_callback( 'fitbit_oauth2' )
+  end
 
 
 
