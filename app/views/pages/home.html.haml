@@ -9,25 +9,27 @@
         %h1 Commit to Fit. Pay to Quit.
 
         - if user_signed_in?
-          = form_for @contract, url: contracts_path, layout: :horizontal do |f|
+          = form_for @contract, url: contracts_path do |f|
             %h2
-              = f.number_field :minutes_of_activity, autofocus: true
-            %h2
-              = f.number_field :times_per_week
-            %h2
-              = f.number_field :number_of_weeks
-            %h2
-              = f.number_field :forfit_amount
+              I will do
+              = f.number_field :minutes_of_activity, autofocus: true, :value => '30'
+              minutes of exercise,
+              = f.number_field :times_per_week, :value => '5'
+              times per week, for
+              = f.number_field :number_of_weeks, :value => '6'
+              weeks,<br /> or pay a ForFit of £
+              = f.number_field :forfit_amount, :value => '50'
 
             = javascript_include_tag "https://checkout.stripe.com/v2/checkout.js", 
               :class => "stripe-button", 
               :"data-key" => "#{Rails.configuration.stripe[:publishable_key]}", 
-              :"data-label" => "Submit",
+              :"data-label" => "Yes, I can do it!",
               :"data-panel-label" => "Commit to Fit",
-              :"data-name" => "ForFitter",
-              :"data-description" => "Your card will only be charged if you fail", 
+              :"data-name" => "ForFit",
+              :"data-description" => "Your card will not be charged now", 
               :"data-image" => ""
-
+            
+            %h6 You will only be charged if you quit.
         -else
           %p
             = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')

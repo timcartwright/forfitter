@@ -43,3 +43,12 @@
     line-height: 0.8;
   }
 }
+
+#new_contract {
+  input {
+    border: none;
+    border-bottom: 1px dotted;
+    width: 60px;
+    text-align: center;
+  }
+}
