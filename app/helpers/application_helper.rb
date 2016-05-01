@@ -18,4 +18,8 @@ module ApplicationHelper
   def page_title
     @title || controller_name.gsub( /Controller/, "" ).humanize
   end
+
+  def user_has_contract?
+    return true if current_user.contracts
+  end
 end
