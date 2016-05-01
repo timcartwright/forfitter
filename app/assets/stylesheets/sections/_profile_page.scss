@@ -71,3 +71,86 @@
     font-family: inherit !important;
     font-weight: normal !important;
 }
+
+
+.how-it-works {
+    position: absolute;
+    top: -494px;
+    left: 0;
+    right: 0;
+    -webkit-transition: top 0.3s ease;
+    -moz-transition: top 0.3s ease;
+    transition: top 0.3s ease;
+    z-index: 9999
+}
+
+.how-it-works .inner {
+    position: relative;
+    background: #f8f8f8;
+    padding: 20px 0 50px 0;
+    max-height: 410px;
+    overflow: hidden
+}
+
+.how-it-works.how-it-works-open {
+    top: 0px
+}
+
+.how-it-works .how-it-works-close {
+    position: absolute;
+    right: 20px;
+    cursor: pointer
+}
+
+.how-it-works h4 {
+    margin: 20px auto 40px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #111213
+}
+
+.how-it-works .ic-icon {
+    font-size: 40px
+}
+
+.how-it-works-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.1%;
+    text-align: center;
+    color: #a4a3a2
+}
+
+.how-it-works-section .title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 16px;
+    color: #111213
+}
+
+.how-it-works-section .icon-image {
+    display: block;
+    background: no-repeat center/contain #f8f8f8;
+    height: 160px;
+    width: 100%;
+    margin-bottom: 50px
+}
+
+.how-it-works-section .commit {
+    background-image: image-url("cartoon_stopwatch.jpg");
+}
+
+.how-it-works-section .get-fit {
+    background-image: image-url("heart_running.png");
+}
+
+.how-it-works-section .never-quit {
+    background-image: image-url("clipboard.jpg");
+}
+
+.how-it-works-section .content {
+    color: #939291;
+    font-size: 17px
+}

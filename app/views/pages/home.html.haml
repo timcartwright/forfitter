@@ -37,3 +37,35 @@
           %h1 Commit to Fit. Pay to Quit.
           %p
             = link_to image_tag("ConnectWithStrava.png"), omniauth_authorize_path(:user, 'strava')
+
+.how-it-works.section
+  .inner
+    .how-it-works-close
+      %span.glyphicon.glyphicon-remove
+    .how-it-works-title
+      %h4
+        Set a fitness goal and back yourself with cash.
+    
+    .how-it-works-section
+      .icon-image.commit
+      %h5.titleOrder Commit
+      %span.content
+        Set your fitness target.<br />
+        Choose the amount to pay if you quit.
+
+    .how-it-works-section
+      .icon-image.get-fit
+      %h5.titleOrder Get Fit
+      %span.content
+        Save your activities on Strava<br />
+
+    .how-it-works-section
+      .icon-image.never-quit
+      %h5.titleOrder Never Quit
+      %span.content
+        ForFit monitors your progress.<br />
+        You only pay if you quit.
+
+      
+    
+  

@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @contract = current_user.contracts.first || Contract.new
+    if user_signed_in?
+      @contract = current_user.contracts.first || Contract.new
+    end 
   end
 end

@@ -13,3 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+
+$('.how-it-works-button').click(function(e){
+  e.preventDefault();
+  $('.how-it-works').addClass('how-it-works-open')
+});
+
+$('.how-it-works-close').click(function(){
+  $('.how-it-works').removeClass('how-it-works-open')
+});
