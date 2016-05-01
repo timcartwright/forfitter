@@ -20,12 +20,12 @@ class ContractsController < ApplicationController
     if contract.save
       save_stripe_customer_id(contract, customer.id)
       save_strava_token(contract)
-      flash[:notice] = "Contract Created"
-    else
-      flash[:alert] = "Couldn't Create Contract"
+    #   flash[:notice] = "Contract Created"
+    # else
+    #   flash[:alert] = "Couldn't Create Contract"
     end
 
-    redirect_to contracts_path
+    redirect_to root_path
   end
 
 private

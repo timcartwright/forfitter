@@ -20,6 +20,6 @@ module ApplicationHelper
   end
 
   def user_has_contract?
-    return true if current_user.contracts
+    return true if current_user.contracts.first
   end
 end

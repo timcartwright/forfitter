@@ -7,3 +7,6 @@
     = nav class: 'navbar-right' do
       = link_to 'How It Works', '', class: 'how-it-works-button'
       / = render partial: "application/account_dropdown"
+
+      - if user_signed_in?
+        = link_to 'Sign Out', destroy_user_session_path, :method=>:delete
